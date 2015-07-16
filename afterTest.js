@@ -11,7 +11,6 @@ var parser = new xml2js.Parser();
 
 fs.readFile(files[0], function( err, data ) {
 
-
     console.log('afterTest.js readFile');
 
     parser.parseString(data, function( err, result ) {
@@ -55,12 +54,13 @@ fs.readFile(files[0], function( err, data ) {
 
         console.log('endpoint', endpoint);
 
-        request.post(endpoint,
-            {
+        request({
+                uri: endpoint,
+                method: 'POST',
                 json: appVeyorTestBatch
             },
             function( error, response, body ) {
-                if (error){
+                if ( error ) {
                     console.log('request', error);
                 }
                 if ( !error && response.statusCode == 200 ) {
