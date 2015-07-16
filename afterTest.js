@@ -42,13 +42,18 @@ fs.readFile(files[0], function( err, data ) {
 
         });
 
-        request.post('/api/test',
+        var endpoint = process.env.APPVEYOR_API_URL + 'api/test';
+
+        request.post(endpoint,
             {
                 json: appVeyorTestBatch
             },
             function( error, response, body ) {
+                if (error){
+                    console.log(error);
+                }
                 if ( !error && response.statusCode == 200 ) {
-                    console.log(body)
+                    console.log(body);
                 }
             }
         );
