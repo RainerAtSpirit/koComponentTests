@@ -50,7 +50,7 @@ fs.readFile(files[0], function( err, data ) {
 
         console.log('appVeyorTestBatch', appVeyorTestBatch);
 
-        var endpoint = process.env.APPVEYOR_API_URL + 'api/test';
+        var endpoint = process.env.APPVEYOR_API_URL + 'api/tests/batch';
 
         console.log('endpoint', endpoint);
 
