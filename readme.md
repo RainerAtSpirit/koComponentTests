@@ -8,5 +8,5 @@ karma, mocha, chai (sinon)
 wallaby.js
 
 ## CI
-wip appveyor
+[![Build status](https://ci.appveyor.com/api/projects/status/wht041gppn8pwrag/branch/master?svg=true)](https://ci.appveyor.com/project/RainerAtSpirit/kocomponenttests/branch/master)
 
