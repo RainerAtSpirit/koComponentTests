@@ -45,6 +45,8 @@ fs.readFile(files[0], function( err, data ) {
 
             }
 
+            return testCase;
+
         });
 
         console.log('appVeyorTestBatch', appVeyorTestBatch);
