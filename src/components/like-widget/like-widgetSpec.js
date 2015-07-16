@@ -32,13 +32,13 @@ describe('like widget', function() {
 
     describe('viewModel', function() {
         var params = {
-                value: ko.observable('like me')
+                value: ko.observable('like')
             },
             vm = new sut.viewModel.createViewModel(params);
 
         it('vm.choosenValue should be \'like\'', function() {
 
-            assert.equal(vm.chosenValue(), 'like');
+            assert.equal(vm.chosenValue(), 'like me');
 
         });
     });

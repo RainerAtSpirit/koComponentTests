@@ -34,7 +34,7 @@ test_script:
 
 # scripts to run after tests
 after_test:
-  - ps: afterBuild.ps
+  - cmd: node afterTest.js
 
 
 matrix:
