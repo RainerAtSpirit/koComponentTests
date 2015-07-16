@@ -33,6 +33,16 @@ module.exports = function( config ) {
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['progress', 'junit'],
 
+        junitReporter: {
+            outputDir: '', // results will be saved as $outputDir/$browserName.xml
+            suite: ''
+        },
+
+        jsonReporter: {
+            stdout: true,
+            outputFile: 'karma.json' // defaults to none
+        },
+
         // web server port
         port: 9876,
 
