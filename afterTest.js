@@ -4,10 +4,15 @@ var fs = require('fs'),
     xml2js = require('xml2js'),
     glob = require('glob');
 
+console.log('afterTest.js');
+
 var files = glob.sync('./Chrome*.xml');
 var parser = new xml2js.Parser();
 
 fs.readFile(files[0], function( err, data ) {
+
+
+    console.log('afterTest.js readFile');
 
     parser.parseString(data, function( err, result ) {
         if ( err ) {
@@ -42,7 +47,11 @@ fs.readFile(files[0], function( err, data ) {
 
         });
 
+        console.log('appVeyorTestBatch', appVeyorTestBatch);
+
         var endpoint = process.env.APPVEYOR_API_URL + 'api/test';
+
+        console.log('endpoint', endpoint);
 
         request.post(endpoint,
             {
