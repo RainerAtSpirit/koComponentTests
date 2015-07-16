@@ -38,7 +38,7 @@ describe('like widget', function() {
 
         it('vm.choosenValue should be \'like\'', function() {
 
-            assert.equal(vm.chosenValue(), 'like me');
+            assert.equal(vm.chosenValue(), 'like');
 
         });
     });
