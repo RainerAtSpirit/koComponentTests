@@ -32,9 +32,8 @@ test_script:
   # - ps: "npm test # PowerShell" # Pass comment to PS for easier debugging
   - cmd: npm test
 
-
-on_finish::
-  - echo on finish
+# scripts to run after tests
+after_test:
   - cmd: node afterTest.js
 
 matrix:
