@@ -33,11 +33,9 @@ test_script:
   - cmd: npm test
 
 
-# scripts to run after tests
-after_test:
-  - echo after test
+on_finish::
+  - echo on finish
   - cmd: node afterTest.js
-  - echo after test 2
 
 matrix:
   fast_finish: true
