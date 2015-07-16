@@ -32,7 +32,7 @@ describe('like widget', function() {
 
     describe('viewModel', function() {
         var params = {
-                value: ko.observable('like')
+                value: ko.observable('like me')
             },
             vm = new sut.viewModel.createViewModel(params);
 
