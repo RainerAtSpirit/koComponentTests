@@ -33,7 +33,7 @@ test_script:
   - cmd: npm test
 
 # scripts to run after tests
-after_test:
+on_finish :
   - cmd: node afterTest.js
 
 matrix:
