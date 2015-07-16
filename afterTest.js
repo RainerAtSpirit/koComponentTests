@@ -61,10 +61,10 @@ fs.readFile(files[0], function( err, data ) {
             },
             function( error, response, body ) {
                 if (error){
-                    console.log(error);
+                    console.log('request', error);
                 }
                 if ( !error && response.statusCode == 200 ) {
-                    console.log(body);
+                    console.log('request', body);
                 }
             }
         );
