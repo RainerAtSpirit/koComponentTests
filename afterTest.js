@@ -18,7 +18,7 @@ fs.readFile(files[0], function( err, data ) {
 
         var map = {
             'testName': '',
-            'testFramework': 'karma',
+            'testFramework': 'mocha',
             'fileName': '',
             'outcome': 'Passed',
             'durationMilliseconds': '',

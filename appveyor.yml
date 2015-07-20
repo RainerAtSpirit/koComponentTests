@@ -4,7 +4,7 @@
 # Build version format
 version: "{build}"
 
-clone_depth: 10
+shallow_clone: true
 
 # Fix line endings on Windows
 init:
